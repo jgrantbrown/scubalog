@@ -8,9 +8,15 @@ Last Name<h1><%= @diver.last_name %></h1>
     <% @dives.each do |dive| %>
       <% if @diver.id==dive.diver_id   %>
       <p>  Dive Location: <%= dive.location %><p>
-      <% end %>
-    <% end%>
 
+
+        <% if @diver.id==current_user[:id]%>
+          <%= link_to "Dive details", dife_path(:diver_id => @diver.id) %>
+        <% end %>
+      <% end %>
+      <% end%>
 </div>
 
- <%= link_to " Add a Dive", new_dife_path(:diver_id => @diver.id) %>
+<% if @diver.id==current_user[:id]%>
+  <button><%= link_to " Add a Dive", new_dife_path(:diver_id => @diver.id) %></button>
+<% end %>

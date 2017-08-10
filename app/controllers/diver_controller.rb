@@ -1,7 +1,6 @@
 class DiverController < ApplicationController
 
   def show
-
     @diver = Diver.find(params[:id])
     @dives = Dive.all
   end
