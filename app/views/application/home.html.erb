@@ -1,0 +1,12 @@
+
+
+              <h1> Scuba Dive Log</h1>
+              <% if logged_in? %>
+                Welcome back
+                <p><%= current_user.username %></p>
+                <%= link_to "Log Out", sessions_path, method: :delete %>
+
+              <% else %>
+                <%= link_to "Log In", new_session_path %>
+                <%= link_to "Sign up", new_registration_path %>
+              <% end %>

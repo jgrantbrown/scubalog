@@ -1,0 +1,14 @@
+<h1>All  Dives</h1>
+
+
+<!-- <% @dives.each do |dive| %>
+<% @divers.each do |diver| %>
+<p>  Location: <%= dive.location %> DIVER Name: <%=diver.first_name %><p>
+<%end%>
+<%end%> -->
+
+
+
+<% @dives.each do |dive| %>
+<p>Location: <%= dive.location %> DIVER Name: <%=dive.diver.first_name %> <p>
+<%end%>

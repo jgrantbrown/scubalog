@@ -1,0 +1,15 @@
+<%= form_for @account, url: path do |f| %>
+<div class ="username">
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</div>
+
+<div class ="password">
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+
+<div class ="submit">
+  <%= f.submit button_text%>
+</div>
+<% end %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scubalog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <% if flash[:error]%>
+      <div class ="error">
+        <%= flash[:error] %>
+      </div>
+    <% end%>
+
+    <div class='topnav'>
+      <%= link_to "Home", root_path, method: :get%>
+      <%= link_to  "Divers", diver_index_path, method: :get %>
+      <%= link_to  "Dives", dives_path, method: :get %>
+
+      <%= link_to "Log Out", sessions_path, method: :delete %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

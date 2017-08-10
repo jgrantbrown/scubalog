@@ -1,0 +1,45 @@
+// Place all the styles related to the dive controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+input, textarea {
+  font    : .9em/1.5em, sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : auto;
+  border-bottom: groove lightblue;
+
+}
+
+.divetemp{
+  font    : .9em/1.5em, sans-serif;
+
+  border  : none;
+  padding : 0 ;
+  margin  : 0;
+  width   : 30%;
+  border: groove lightblue;
+  background-color: white;
+}
+
+.airtemp{
+  font    : .9em/1.5em, sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : auto;
+  border: none;
+  background-color: white;
+}
+.watertemp{
+  font    : .9em/1.5em, sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : auto;
+  border: none;
+  background-color: lightblue;
+}

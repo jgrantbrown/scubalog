@@ -1,0 +1,16 @@
+<h1> Diver Profile Page </h1>
+First Name:<h1><%= @diver.first_name %></h1>
+Last Name<h1><%= @diver.last_name %></h1>
+
+<div>
+  <h2>Past Dives<h2>
+
+    <% @dives.each do |dive| %>
+      <% if @diver.id==dive.diver_id   %>
+      <p>  Dive Location: <%= dive.location %><p>
+      <% end %>
+    <% end%>
+
+</div>
+
+ <%= link_to " Add a Dive", new_dife_path(:diver_id => @diver.id) %>

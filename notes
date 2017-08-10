@@ -1,0 +1,27 @@
+Add sessions login log out
+need account controller
+
+
+NOTES:
+diver has many dives
+dives belong to diver
+diver has an account
+
+
+future
+divesite  belongs to dive
+diver has many divesites through dive
+divesite has many dives
+
+ADD ROLES
+Divemaster
+Admin
+DiveBuddy
+
+Profile :
+dive level
+number of dives
+dives
+most often dive site
+total down time
+time up since last dive

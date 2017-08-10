@@ -1,0 +1,61 @@
+total dives: <%= @dives.count %>
+This will be dive  #<%= (@dives.count + 1 ) %>
+
+<%= form_for @dive, url: dives_path do |f| %>
+  
+    <p><%= f.label :date %> <%=text_field_tag("dive[date]")%></p>
+  <p>Location</p><%=f.text_field :location %>
+  <p>Time in:</p><%=f.number_field :time_in%>
+  <p>Time Out:</p><%= f.number_field :time_out%>
+  <p> bar/psi START</p><%=f.number_field :psi_start %>
+  <p> bar/psi END </p><%=f.number_field :psi_end%>
+  <div>
+      <p>Weight</p><%=f.number_field :weight%>
+      <li>lbs</li>
+      <li>Kg</li>
+  </div>
+  <div>
+    <p>Exposure Protection<p>
+    <li>list of wet suit types etc</li>
+  </div>
+    <p>Visibility</p><%=f.text_field :visibility%>
+    <p>Computer</p><%=f.text_field :computer%>
+    <div>
+      <p>Water Condtions:</p>
+      <li>Drop down list of water  FEsh,salt,shore,boat,waves,current,surf surge</li>
+    </div>
+    <div class=divetemp>
+      <p>Temperature</p>
+      <div class=airtemp><p> Air:</p><%=f.text_field :air_temp%></div>
+      <div class=watertemp><p>~~~~~~~~~~</p>
+      <p> Surface:</p><%=f.text_field :surface_temp %>
+      <p> Bottom:</p><%=f.text_field :bottom_temp %>
+    </div>
+    </div>
+    <div><p>Dive Table Planner</p>
+    <li><table>
+      <tr>Pressure Group</tr>
+      <tr>Surface Interval</tr>
+    </table></li>
+    </div>
+
+  <div>
+    <p>Comments:</p>
+    <%= f.text_field:comments%>
+    </div>
+    <div>
+    <p>Bottom Time to Date:</p>
+    <p>Time This Dive +</p><%=f.text_field :dive_time%>
+    <p>Cumulative Time =</p>
+    </div>
+    <%= hidden_field_tag("dive[diver_id]", params[:diver_id]) %>
+<%= f.submit "Create" %>
+<% end %>
+
+ADD DIVEMASTER/BUDDY DIVE VERIFICATION
+    <div class="divecertify">
+    <h2>Verification Signature</h2>
+    <p></p>
+    <p>Check box Insructor Divemaster Buddy</p>
+    <h2> Certification NO.</p>
+    </div>
