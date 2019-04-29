@@ -16,6 +16,9 @@ gem "rails-html-sanitizer", ">= 1.0.4"
 gem "loofah", ">= 2.2.3"
 gem "nokogiri", ">= 1.8.5"
 
+# Add REact to rails app
+gem 'react-rails'
+
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
