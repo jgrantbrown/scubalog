@@ -5,6 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Updagtes for Github warnings 4/29/19
+gem "actionview", ">= 5.1.6.2"
+gem "activejob", ">= 5.1.6.1"
+gem "rack", ">= 2.0.6"
+gem "rubyzip", ">= 1.2.2"
+gem "ffi", ">= 1.9.24"
+gem "sprockets", ">= 3.7.2"
+gem "rails-html-sanitizer", ">= 1.0.4"
+gem "loofah", ">= 2.2.3"
+gem "nokogiri", ">= 1.8.5"
+
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
