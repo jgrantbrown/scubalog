@@ -12,6 +12,7 @@ def new
 end
 
 def show
+  # showing wrong dive. needs to match diver_id to dive
   @dive=Dive.find(params[:id])
   
 end

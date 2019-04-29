@@ -1,20 +1,24 @@
 <h1> Diver Profile Page </h1>
+
 First Name:<h1><%= @diver.first_name %></h1>
 Last Name<h1><%= @diver.last_name %></h1>
 
 <div>
-  <h2>Past Dives<h2>
-
+  <h2>Past Dives</h2>
     <% @dives.each do |dive| %>
-      <% if @diver.id==dive.diver_id   %>
-      <p>  Dive Location: <%= dive.location %><p>
+    
+      <% if @diver.id == dive.diver_id   %>
+          <p>  Dive Location: <%= dive.location %><p>
 
-
-        <% if @diver.id==current_user[:id]%>
+        <% if @diver.id == current_user[:id]%>
           <%= link_to "Dive details", dife_path(:diver_id => @diver.id) %>
         <% end %>
+      <% else %>
+            <p> NO Dives listed </p>
       <% end %>
-      <% end%>
+
+      <% end %>
+
 </div>
 
 <% if @diver.id==current_user[:id]%>

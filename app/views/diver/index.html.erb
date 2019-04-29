@@ -2,6 +2,7 @@
 <h1>All of our Divers</h1>
 
 <% @divers.each do |diver| %>
+
 <p>
 Diver First Name: <%= diver.first_name %> <%= link_to("Diver Profile", diver_path(diver.id))%></p>
 <% end %>
